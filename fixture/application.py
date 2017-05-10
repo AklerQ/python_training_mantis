@@ -5,6 +5,7 @@ from fixture.session import SessionHelper
 from fixture.navigation import NavigationHelper
 from fixture.project import ProjectHelper
 from fixture.james import JamesHelper
+from fixture.signup import SignupHelper
 
 
 class Application:
@@ -22,6 +23,7 @@ class Application:
         self.navigation = NavigationHelper(self)
         self.project = ProjectHelper(self)
         self.james = JamesHelper(self)
+        self.signup = SignupHelper(self)
         self.config = config
         self.base_url = config['web']['baseUrl']
 
