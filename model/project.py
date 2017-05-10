@@ -1,4 +1,5 @@
 from sys import maxsize
+import re
 
 
 class Project:
@@ -20,3 +21,7 @@ class Project:
             return int(self.id)
         else:
             return maxsize
+
+    def clear(self):
+        return Project(id=self.id, name=re.sub("[ ]{1,}", " ", (self.name).strip()),
+                       description=re.sub("[ ]{1,}", " ", (self.description).strip()))
